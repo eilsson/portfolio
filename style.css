@@ -40,7 +40,7 @@ header:before {
   content: '';
   display: block;
   left: 0;
-  height: 60vh;
+  height: 350px;
   filter: brightness(75%);
   position: absolute;
   top: 0;
@@ -54,7 +54,7 @@ header {
   grid-gap: 10px;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
-  height: 60vh;
+  height: 350px;
   line-height: 1.2;
   position: relative;
   width: 100%;
@@ -118,6 +118,30 @@ header .social-media span {
 }
 
 /* Introduction */
+.line {
+margin-right: 45px;
+position: relative;
+}
+.line:before {
+  background-color: #fa382f;
+  bottom: 10px;
+  content:'';
+  display: inline-block;
+  height: 2px;
+  position: absolute;
+  width: 30px;
+}
+.line:after {
+  background: #fa382f;
+  border-radius: 50%;
+  content: '';
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  bottom: 7px;
+  left: 30px;
+  position: absolute;
+}
 .introduction,
 .projects,
 .tech,
@@ -173,20 +197,89 @@ header .social-media span {
   text-align: center;
 }
 
-/* Fore more – social media */
-.for-more .social-media {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-columns: repeat(2, 1fr);
-  justify-items: center;
+/* Projects */
+.projects ul {
+  list-style: none;
+  margin: 0 auto;
+  width: 100%;
 }
 
-.linkedin-icon,
-.github-icon,
+.projects img {
+  width: 100%;
+}
+.project {
+  margin-bottom: 2rem;
+  text-align: left;
+}
+.project-name {
+  color: #fa382f;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+.project figcaption {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.skills-used {
+  background-color: #fddfe7;
+  margin-right: 0.25rem;
+  margin-top: 2rem;
+  padding: 0.25rem;
+}
+/* Fore more – social media */
+.for-more .social-media {
+  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  margin-top: 1rem;
+}
+
+.linkedin,
+.github,
 .stackoverflow {
   position: relative;
 }
 
+.linkedin-text,
+.github-text,
+.stackoverflow-text {
+  margin-top: 1rem;
+  color: #fa382f;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+}
+
+.github-text,
+.stackoverflow-text {
+  line-height:0;
+}
+
+.linkedin:before,
+.github:before,
+.stackoverflow:before {
+  border: 2px solid #fa382f;
+  border-radius: 50%;
+  content: '';
+  display: block;
+  width:40px;
+  height: 40px;
+  position: absolute;
+}
+
+.linkedin:before {
+  bottom: 22px;
+  left: 2px;
+}
+.stackoverflow:before {
+  bottom: 16px;
+  left: 24px;
+}
+.github:before {
+  bottom: 16px;
+  right: -3px;
+}
 .linkedin span,
 .github span,
 .stackoverflow span {
@@ -196,24 +289,15 @@ header .social-media span {
 
 .linkedin {
   grid-column: 1 / span 1;
-  grid-row: 1 / span 2;
 }
 
 .github {
   grid-column: 2/span 1;
-  grid-row: 1 / span 2;
 }
 .stackoverflow {
   grid-column: 3/span 1;
-  grid-row: 1 / span 2;
 }
 
-.for-more .social-media  span {
-  color: #fa382f;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.6rem;
-  text-transform: uppercase;
-}
 
 /* Footer */
 
@@ -303,5 +387,16 @@ footer h2 {
   }
   .stackoverflow {
     grid-column: 8/span 2;
+  }
+
+  ul.featured-projects {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 auto;
+    width: 70%;
+  }
+  .project {
+    grid-column: auto / span 1;
   }
 }
