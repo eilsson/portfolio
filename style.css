@@ -1,402 +1,372 @@
-/* font-family: 'Montserrat', sans-serif;
-font-family: 'Roboto', sans-serif;*/
-* {
+/* Resets */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body,
+header,
+main,
+section,
+footer,
+h1,
+h2,
+h3,
+p,
+ul[class],
+li {
   margin: 0;
+}
+
+ul[class] {
+  list-style: none;
   padding: 0;
 }
 
-html,
 body {
-  height: 100vh;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
+  min-height: 100vh;
   line-height: 1.5;
 }
 
-h2 {
-  background-color: #fa382f;
-  color: #fff;
-  display: inline-block;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1rem;
-  margin: 1rem auto;
-  padding: 0.25rem;
-  text-transform: uppercase;
-}
-
+/* Typography */
+h1,
+h2,
 h3 {
   font-family: 'Montserrat', sans-serif;
-  text-align: center;
-}
-p {
-  text-align: left;
-}
-/* Header */
-header:before {
-  background: #2b2e34;
-  background-image: url('assets/slack-imgs.png');
-  background-size: cover;
-  content: '';
-  display: block;
-  left: 0;
-  height: 350px;
-  filter: brightness(75%);
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: -1;
-}
-
-header {
-  color: #fff;
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  height: 350px;
   line-height: 1.2;
-  position: relative;
-  width: 100%;
 }
 
 h1 {
-  grid-column: 1/ span 4;
-  grid-row: 2 /span 2;
-  margin: 1rem 2rem;
-}
-header .social-media {
-  display: grid;
-  grid-column: 3 / span 2;
-  grid-gap: 0;
-  grid-row: 1 / span 1;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(1, 1fr);
-  justify-items: center;
-  margin: 1rem 2rem 0 1rem;
-}
-header .social-media img {
-  grid-row: 3 /span 1;
+  font-size: 3rem;
 }
 
-.portrait {
-  grid-column: 3 / span 2;
-  grid-row: 4 / span 1;
-  position: relative;
-  top: 0.6rem;
+h2 {
+  font-size: 2.5rem;
 }
-.portfolio-author {
-  display: block;
+
+h3 {
+  font-size: 2rem;
+}
+
+a,
+p,
+ul {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+}
+
+.site-title {
   font-family: 'Roboto', sans-serif;
   font-size: 0.8rem;
   font-weight: 400;
-  text-transform: uppercase;
 }
-
-.primary-title,
-.secondary-title {
-  display: block;
-  font-family: 'Montserrat', sans-serif;
+.author-name {
   font-weight: 700;
 }
 
-.primary-title {
-  font-size: 2rem;
-}
-.secondary-title {
-  font-size: 1.5rem;
+.job-title-primary {
   display: block;
+  font-size: 2.25rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  line-height: 1.2;
 }
-.portrait {
-  height: auto;
-  width: 120px;
+.job-title-secondary { 
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  line-height: 1.2;
 }
-
-header .social-media span {
-  visibility: hidden;
-  width: 0;
+.site-title,
+.section-title {
+  text-transform: uppercase;
 }
-
-/* Introduction */
-.line {
-margin-right: 45px;
-position: relative;
-}
-.line:before {
+.section-title {
   background-color: #fa382f;
-  bottom: 10px;
-  content:'';
+  color: #fff;
   display: inline-block;
-  height: 2px;
-  position: absolute;
-  width: 30px;
+  font-size: 1rem;
+  margin: 1rem auto;
+  padding: 0.25rem;
 }
-.line:after {
-  background: #fa382f;
-  border-radius: 50%;
-  content: '';
-  display: inline-block;
-  height: 8px;
-  width: 8px;
-  bottom: 7px;
-  left: 30px;
-  position: absolute;
+
+.article-preamble,
+.project-summary {
+  font-family: 'Roboto', sans-serif;
 }
-.introduction,
-.projects,
-.tech,
-.my-thoughts,
-.skills,
-.for-more {
-  padding: 2rem 2rem 4rem 2rem;
+
+.section-title,
+.subsection-title,
+.skills-list {
   text-align: center;
-  width: 100%;
 }
-.introduction,
-.projects,
-.skills {
+
+.subsection-title,
+.article-publishing-date,
+.github-link,
+.project-title-description {
+  color: #fa382f;
+}
+
+.featured-project-title {
+  font-size: 1rem;
+}
+/* Grid */
+body {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: auto;
+
+  grid-template-areas: 
+  "header header header header"
+  "main main main main"
+  "footer footer footer footer";
+}
+
+.site-header,
+.portfolio-section,
+.site-footer {
+padding: 1.25rem 2.5rem;
+}
+
+header {
+  grid-area: header;
+}
+
+main {
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
+}
+
+/* Colors */
+.portfolio-section:nth-child(odd) {
   background-color: #f4f4f4;
 }
 
-.tech,
-.my-thoughts,
-.fore-more{
+.portfolio-section:nth-child(even) {
   background-color: #fff;
+}
+
+.site-footer {
+  background-color: #072bce;
+  color: #fff;
+  text-align: center;
+}
+.project-skills li {
+  background-color: #fddfe7;
+}
+.portfolio-section {
+  text-align: center;
+}
+.introduction,
+.projects {
+  text-align: left;
+}
+/* Projects */
+.featured-project-title {
+  background-image: url('./assets/671efedfde84106f4952e1242aba9bc3.png');
+  background-size: cover;
+  background-position: center;
+  height: 150px;
+  width: 100%;
+  text-align: center;
+}
+.project-skills {
+  display: flex;
+
+}
+
+.project-skills li {
+  margin-right: 0.25rem;
+  margin-top: 2rem;
+}
+
+/* Header */
+
+/* Articles */
+
+/* Skills */
+.social-media-icon {
+  height: 16px;
+}
+.header-social-icons {
+  fill: #fff;
+}
+
+.social-media-icons {
+  fill: #fa382f;
+}
+
+/* Header grid */
+.site-header {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(10px, auto);
+
+  grid-template-areas:
+  ".... .... .... social"
+  "title title title title"
+  "tagline tagline tagline tagline"
+  ".... .... .... portrait"
+  ".... .... .... portrait"
+  ".... .... .... portrait"
+  ".... .... .... portrait";
+}
+
+.site-title {
+  grid-area: title;
+}
+.social-links {
+  grid-area: social;
+}
+.site-tagline {
+  grid-area: tagline;
+}
+
+.author-portrait {
+  grid-area: portrait;
+}
+
+.site-header {
+  position: relative;
+}
+/*.site-header {
+  background-image: url('./assets/slack-imgs.png');
+  background-size: contain;
+  height: 260px;
+  position: relative;
+}*/
+
+.site-header {
+  color: #fff;
+  height: auto;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+}
+.site-header::before {
+  background: url('./assets/slack-imgs.png') center;
+  content: '';
+  height: 100%;
+  position: absolute;
+  filter: brightness(75%);
+  width: 100%;
+  z-index: -1;
+}
+.author-portrait {
+  right: 0;
+  position: absolute;
+  top: 0;
+  width: 100px;
+}
+
+.social-links {
+  display: flex;
+}
+
+.social-media-icon {
+
+}
+
+.social-links li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-left: 1rem;
+}
+.social-links li::before {
+  content: '';
+  display: block;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  position: absolute;
+}
+
+.social-media .social-links li::before {
+  border-color: #fa382f;
+}
+
+.portfolio-section .tech {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: auto;
+
+  grid-template-areas:
+  ".... title title ...."
+  "text text text text";
 }
 
 .skills {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(10px, auto);
+
+  grid-template-areas:
+  ".... title title ...."
+  "coding coding toolbox toolbox"
+  "upcoming upcoming more more";
 }
 
-.skills h2 {
-  grid-column: 2 / span 2;
+.coding-skills {
+  grid-area: coding;
 }
 
-.coding-skills,
+.toolbox-skills {
+  grid-area: toolbox;
+}
+
 .upcoming-skills {
-  grid-column: 1 / span 2;
+  grid-area: upcoming;
 }
 
-.toolbox-skills,
 .more-skills {
-  grid-column: 3 / span 2;
+  grid-area: more;
 }
-.coding-skills h3,
-.upcoming-skills h3, 
-.toolbox-skills h3,
-.more-skills h3 {
-  color:#fa382f;
-  font-family: 'Roboto', sans-serif;
+.section-title {
+  grid-area: title;
 }
 
-.skills ul {
-  list-style: none;
-  margin:0;
-  text-align: center;
+.section-title + p {
+  grid-area: text;
 }
 
-/* Projects */
-.projects ul {
-  list-style: none;
-  margin: 0 auto;
-  width: 100%;
+.featured-project {
+  grid-area: featured;
 }
 
-.projects img {
-  width: 100%;
+.skills-list {
+  grid-area: skills;
 }
-.project {
-  margin-bottom: 2rem;
-  text-align: left;
-}
-.project-name {
-  color: #fa382f;
-  font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
-}
-.project figcaption {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-}
-.skills-used {
-  background-color: #fddfe7;
-  margin-right: 0.25rem;
-  margin-top: 2rem;
-  padding: 0.25rem;
-}
-/* Fore more – social media */
-.for-more .social-media {
-  align-items: center;
+
+.social-media {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: minmax(10px, auto);
   justify-items: center;
-  margin-top: 1rem;
+
+  grid-template-areas:
+  ".... title title ...."
+  ".... social  social ....";
 }
 
-.linkedin,
-.github,
-.stackoverflow {
-  position: relative;
+.social-media .social-links {
+grid-area: social;
 }
 
-.linkedin-text,
-.github-text,
-.stackoverflow-text {
-  margin-top: 1rem;
-  color: #fa382f;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.6rem;
-  text-transform: uppercase;
-}
-
-.github-text,
-.stackoverflow-text {
-  line-height:0;
-}
-
-.linkedin:before,
-.github:before,
-.stackoverflow:before {
-  border: 2px solid #fa382f;
-  border-radius: 50%;
-  content: '';
-  display: block;
-  width:40px;
-  height: 40px;
-  position: absolute;
-}
-
-.linkedin:before {
-  bottom: 22px;
-  left: 2px;
-}
-.stackoverflow:before {
-  bottom: 16px;
-  left: 24px;
-}
-.github:before {
-  bottom: 16px;
-  right: -3px;
-}
-.linkedin span,
-.github span,
-.stackoverflow span {
-  display: block;
-  text-align: center;
-}
-
-.linkedin {
-  grid-column: 1 / span 1;
-}
-
-.github {
-  grid-column: 2/span 1;
-}
-.stackoverflow {
-  grid-column: 3/span 1;
-}
-
-
-/* Footer */
-
-footer {
-  background-color: #072bce;
-  padding: 1rem 1rem 2rem 1rem;
-  text-align: center;
-  width: 100%;
-}
-
-footer h2 {
-  background-color: transparent;
-  margin-bottom: 0;
-  }
-  
-  footer p {
-    color: #fff;
-    text-align: center;
-  }
-
-  /* Desktop */
-@media screen and (min-width: 1024px) {
-   header {
-     background: url('assets/slack-imgs@2x.png');
-     grid-template-columns: repeat(12, 1fr);
-     grid-template-rows: repeat(4, 1fr);
-     height: 40vh;
-   }
-
-    h1 {
-      grid-column: 3/ span 4;
-      grid-row: 2 /span 2;
-      margin: 1rem 2rem;
-    }
-    header .social-media {
-      grid-column: 8 / span 2;
-      grid-row: 1 / span 1;
-    }
-
-    .portrait {
-      grid-column: 9 / span 2;
-      grid-row: 4 / span 1;
-      position: relative;
-      top: 0.6rem;
-    }
-
-  .introduction p,
-  .tech p {
-    margin: 0 auto;
-    width: 60%;
-  }
-  .skills {
-    grid-template-columns: repeat(12, 1fr);
-  }
-  .skills h2 {
-    grid-column: 6 / span 2;
-  }
-
-  .coding-skills {
-    grid-column: 4 / span 2;
-  }
-
-  .toolbox-skills {
-    grid-column: 6 / span 2;
-  }
-
-  .more-skills {
-    grid-column: 8 / span 2;
-    grid-row: 2 / span 1;
-  }
-
-  .upcoming-skills {
-    grid-column: 4 / span 2;
-    grid-row: 3 / span 1;
-  }
-
-  .for-more .social-media {
-    grid-template-columns: repeat(12, 1fr);
-  }
-
-  .linkedin {
-    grid-column: 4 / span 2;
-  }
-
-  .github {
-    grid-column: 6/span 2;
-  }
-  .stackoverflow {
-    grid-column: 8/span 2;
-  }
-
-  ul.featured-projects {
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: repeat(2, 1fr);
-    margin: 0 auto;
-    width: 70%;
-  }
-  .project {
-    grid-column: auto / span 1;
-  }
+.social-media .social-links li:first-child {
+  margin-left: 0;
 }
