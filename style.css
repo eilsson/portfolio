@@ -28,18 +28,20 @@ article {
 
 section,
 footer {
-  padding: 3rem 2.25rem;
+  padding: 4.375rem 2.25rem;
 }
 
 h1,
 h3,
 ul,
-article > header > p,
-article > p {
+p,
+address,
+time {
 font-family: 'Roboto', sans-serif;
 }
 
-p,
+.introduction > p,
+.tech > p,
 h2 {
   font-family: 'Montserrat', sans-serif;
 }
@@ -75,7 +77,7 @@ p {
   display: inline-block;
   font-size: 1rem;
   grid-area: title;
-  margin: 0 auto 2.25rem auto;
+  margin: 0 auto 2rem auto;
   padding: 0.125rem 0.625rem;
   text-transform: uppercase;
 }
@@ -84,8 +86,15 @@ p {
   color: #fa382f;
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  margin-bottom: 2.25rem;
+  margin: 4.375rem 0 2.3125rem 0;
   text-transform: uppercase;
+}
+
+.featured-project a,
+.project a,
+.posts a {
+  color:#000;
+  text-decoration: none;
 }
 
 .read-more {
@@ -96,6 +105,7 @@ p {
 .social-media-icon {
   height: 16px;
   width: auto;
+  z-index: 2;
 }
 
 /* Site header */
@@ -179,20 +189,20 @@ font-weight: 700;
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-left: 25px;
+  margin-left: 15px;
 }
 .social-links li::before {
   content: '';
   display: block;
-  border: 3px solid #fff;
+  border: 2px solid #fff;
   border-radius: 50%;
   height: 36px;
   width: 36px;
   position: absolute;
 }
-
-.site-header .social-media-icon {
-  fill: #fff;
+.social-links .social-link {
+  height: 36px;
+  width: 36px;
 }
 
 /* Projects */
@@ -232,10 +242,6 @@ font-weight: 700;
   text-transform: uppercase;
 }
 
-.project a {
-  color: #000;
-  text-decoration: none;
-}
 .project-skills {
   margin-top: 1rem;
 }
@@ -325,29 +331,49 @@ font-weight: 700;
   ".... title title ...."
   ".... social social ....";
   justify-items: center;
+  padding-bottom: 8rem;
 }
 
-.social-media-icons {
-  fill: #fa382f;
+.social-media-name {
+  color: #fa382f;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  position: absolute;
+  text-transform: uppercase;
+  top: 50px;
 }
 .social-media .social-media-icon {
-  height: 24px;
-}
+  height: 20px;
+} 
+
 .social-media .social-links {
   margin-top: 2.25rem;
 }
 
+.social-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.social-media .social-media-icon {
+  align-self: center;
+  margin-top: 0;
+}
+
 .social-media .social-links li {
-  margin-left: 60px;
+  margin-left: 75px;
 }
 
 .social-media .social-links li:first-child {
   margin: 0;
 }
 .social-media .social-links li::before {
-  border-color: #fa382f;
-  height: 60px;
-  width: 60px;
+  border: 3px solid #fa382f;
+  height: 58px;
+  width: 58px;
 }
 
 /* Footer */
@@ -362,12 +388,45 @@ font-weight: 700;
 }
 .contact-title {
   margin-bottom: 0.5rem;
+  text-transform: uppercase;
 }
+
+.contact-details {
+  font-style: normal;
+  line-height: 2;
+}
+
+.contact-name {
+  font-weight: 700;
+}
+
 .site-footer a {
   color: #fff;
   text-decoration: none;
 }
+
+/* Tablet size */
 @media screen and (min-width: 668px) {
+  .site-header {
+    grid-template-columns: repeat(3, minmax(186px, 213px));
+    grid-template-areas:   
+    ".... .... social"
+    "title .... portrait"
+    "tagline tagline portrait"
+    ".... .... portrait";
+    justify-content: center;
+  }
+
+  .site-header .social-links {
+    justify-content: center;
+  }
+
+  .author-portrait {
+    top: 55px;
+    justify-self: center;
+    width: 200px;
+  }
+
   .portfolio-introduction,
   .tech p {
     max-width: 40rem;
@@ -381,7 +440,7 @@ font-weight: 700;
 
   .posts {
     display: grid;
-    grid-gap: 1.875rem;
+    grid-gap: 0 1.875rem;
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: auto;
   }
@@ -401,10 +460,12 @@ font-weight: 700;
   }
 }
 
+/* Desktop size */
 @media screen and (min-width: 1024px) {
   html {
     font-size: 20px;
   }
+
   .site-header {
     grid-template-columns: repeat(3, 266px);
     grid-template-areas:   
@@ -418,14 +479,21 @@ font-weight: 700;
   .site-tagline {
     margin-bottom: 3rem;
   }
+
   .site-header .social-links {
     justify-self: center;
   }
+
   .author-portrait {
     justify-self: center;
     top: 10px;
     width: 260px;
   }
+
+  .section-title {
+    font-size: 1.2rem;
+  }
+
   .skills {
     grid-template-columns: repeat(3, 300px);
   }
@@ -434,21 +502,24 @@ font-weight: 700;
     grid-template-columns: repeat(2, 400px);
     justify-content: center;
   }
-.other-projects {
-  display: grid;
-  grid-gap: 0 37.5px;
-  grid-template-columns: repeat(2, 400px);
-  justify-content: center;
-}
-.project {
-  grid-column: 1 / span 2;
-}
-  .posts {
-    grid-template-columns: repeat(2, 400px);
+
+  .other-projects {
+    display: grid;
+    grid-gap: 0 37.5px;
+    grid-template-columns: repeat(2, 382px);
     justify-content: center;
   }
 
- .site-header .social-links {
+  .project {
+    grid-column: 1 / span 2;
+  }
+
+  .posts {
+    grid-template-columns: repeat(2, 382px);
+    justify-content: center;
+  }
+
+  .site-header .social-links {
     margin-bottom: 3rem;
   }
 
@@ -457,10 +528,11 @@ font-weight: 700;
     height: 60px;
     width: 60px;
   }
+
   .site-header .social-links li {
-    margin-left: 45px;
+    margin-left: 10px;
   }
-  
+
   .site-header .social-links li:first-child {
     margin: 0;
   }
@@ -469,16 +541,29 @@ font-weight: 700;
     height: 24px;
   }
 
+  .site-header .social-link {
+    height: 60px;
+    width: 60px;
+  }
   .social-media .social-links li::before { 
     height: 90px;
     width: 90px;
   }
 
   .social-media .social-links li {
-    margin-left: 100px;
+    margin-left: 60px;
   }
 
   .social-media .social-media-icon {
     height: 32px;
+  }
+
+  .social-media-name {
+    top: 120px;
+  }
+
+  .social-media .social-link {
+    height: 120px;
+    width: 120px;
   }
 }
