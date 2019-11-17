@@ -167,7 +167,7 @@ p {
 .site-author-portrait {
   grid-area: portrait;
   justify-self: end;
-  top: 5px;
+  top: 0;
   position: relative;
   width: 162px;
 }
@@ -379,7 +379,7 @@ p {
   font-weight: 700;
   position: absolute;
   text-transform: uppercase;
-  top: 50px;
+  top: 60px;
 }
 
 .social-media .social-media-icon {
@@ -393,7 +393,7 @@ p {
 }
 
 .social-media .social-links li {
-  margin-left: 75px;
+  margin-left: 60px;
 }
 
 .social-media .social-links li:first-child {
@@ -457,8 +457,22 @@ p {
     justify-content: center;
   }
 
+  .site-header .social-links li::before {
+    height: 50px;
+    width: 50px;
+  }
+
+  .site-header .social-media-icon {
+    height: 22px;
+  }
+
+  .site-header .social-link {
+    height: 50px;
+    width: 50px;
+  }
+
   .site-author-portrait {
-    top: 55px;
+    top: 40px;
     justify-self: center;
     width: 200px;
   }
@@ -495,6 +509,23 @@ p {
       "upcoming .... ....";
     justify-content: center;
   }
+
+  .social-media .social-links li {
+    margin-left: 80px;
+  }
+  
+  .social-media .social-links li::before {
+    height: 80px;
+    width: 80px;
+  }
+
+  .social-media .social-media-icon {
+    height: 32px;
+  }
+
+  .social-media-name {
+    top: 70px;
+  }
 }
 
 /* Desktop size */
@@ -519,7 +550,6 @@ p {
   }
 
   .site-header .social-links {
-    justify-self: center;
     margin-bottom: 3rem;
   }
 
