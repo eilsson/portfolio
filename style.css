@@ -202,6 +202,33 @@ p {
   width: 36px;
 }
 
+/* Introduction */
+.introduction-decoration {
+  background-color: #fa382f;
+  display: inline-block;
+  height: 2px;
+  margin-bottom: 6px;
+  position: relative;
+  margin-right: 0.8rem;
+  width: 40px;
+}
+
+.introduction-decoration::after {
+  background-color: #fa382f;
+  border-radius: 50%;
+  content: '';
+  display: inline-block;
+  height: 8px;
+  left: 32px;
+  position: absolute;
+  top: -3px;
+  width: 8px;
+}
+
+.introduction::first-letter {
+  margin-left: 3rem;
+}
+
 /* Projects */
 .projects {
   text-align: center;
@@ -430,6 +457,7 @@ p {
     max-width: 40rem;
     margin: 0 auto;
   }
+
   .featured-projects {
     display: grid;
     grid-gap: 1.875rem;
