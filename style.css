@@ -118,15 +118,12 @@ p {
   ".... .... .... social"
   "title title title title"
   "tagline tagline tagline tagline"
-  ".... .... .... portrait"
-  ".... .... .... portrait"
-  ".... .... .... portrait"
   ".... .... .... portrait";
 }
 
 .site-header {
   color: #fff;
-  height: auto;
+  height: 480px;
   padding-top: 4rem;
   position: relative;
   width: 100%;
@@ -164,15 +161,15 @@ p {
 }
 
 .job-title-secondary {
-font-size: 1.5rem;
-font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 700;
 }
 
 .author-portrait {
   grid-area: portrait;
   justify-self: end;
-  top: -80px;
-  position: absolute;
+  top: 5px;
+  position: relative;
   width: 162px;
 }
 
@@ -414,6 +411,7 @@ font-weight: 700;
     "title .... portrait"
     "tagline tagline portrait"
     ".... .... portrait";
+    height: 350px;
     justify-content: center;
   }
 
@@ -473,6 +471,7 @@ font-weight: 700;
     "title title portrait"
     "tagline tagline portrait"
     ".... .... portrait";
+    height: 460px;
     justify-content: center;
   }
 
