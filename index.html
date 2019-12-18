@@ -1,249 +1,394 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>Portfolio: Emmie Nilsson</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CRoboto:400,700&display=swap"
-    rel="stylesheet">
-  <link href="style.css" rel="stylesheet" type="text/css" />
-  <title>Portfolio: Emmie Nilsson</title>
-</head>
-
-<body>
-  <header class="site-header">
-    <h1 class="site-title">Portfolio: <span class="site-author-name">Emmie Nilsson</span></h1>
-    <p class="site-author-tagline">
-      <span class="site-author-job-title-primary">frontend developer</span> <br />
-      <span class="site-author-job-title-secondary">+ content manager</span>
-    </p>
-    <ul class="social-links">
-      <li>
-        <a href="https://www.linkedin.com/in/emmie-nilsson/" class="social-link">
-          <img class="social-media-icon" role="img" src="./assets/linkedin.svg" alt="My resume on Linkedin.">
-        </a>
-      </li>
-      <li>
-        <a href="https://github.com/eilsson?tab=repositories/" class="social-link">
-          <img class="social-media-icon" role="img" src="./assets/github.svg" alt="My repositories on Github." />
-        </a>
-      </li>
-      <li>
-        <a href="https://stackoverflow.com/c/technigo/users/28/" class="social-link">
-          <img class="social-media-icon" role="img" src="./assets/stackoverflow.svg"
-            alt="My profile on Stackoverflow." />
-        </a>
-      </li>
-    </ul>
-    <img srcset="assets/portrait-1x.png 162w,assets/portrait-2x.png 324w" src="./assets/portrait-1x.png"
-      alt="Emmie Nilsson." class="site-author-portrait" />
-  </header>
-  <main>
-    <section aria-label="Introduction" class="portfolio-section introduction">
-      <p class="portfolio-introduction"><span class="introduction-decoration" aria-hidden="true"></span>Hello! I’m a
-        strategic and creative senior art director/digital designer with
-        frontend developer skills and experience design at heart. I’m all about solving problems that matter and
-        creating awesome, meaningful products for people to love. </p>
-    </section>
-    <section aria-label="Tech" class="portfolio-section tech">
-      <h2 class="section-title">Tech</h2>
-      <p>HTML, CSS, Flexbox, Javascript, ES6, JSX, Web Accessibility,
-        API:s, mob-programming, pair-programming, GitHub.
+  <body>
+    <header class="site-header">
+      <h1 class="site-title">
+        Portfolio: <span class="site-author-name">Emmie Nilsson</span>
+      </h1>
+      <p class="site-author-tagline">
+        <span class="site-author-job-title-primary">frontend developer</span>
+        <br />
+        <span class="site-author-job-title-secondary">+ content manager</span>
       </p>
-    </section>
-    <section aria-label="Projects" class="portfolio-section projects">
-      <h2 class="section-title">Featured projects</h2>
-      <div class="featured-projects">
-        <article class="featured-project">
-          <a href="https://github.com/eilsson/">
-            <header class="featured-project-header">
-              <img src="./assets/project-default-small.png"
-                srcset="./assets/project-default-small.png 303w, ./assets/project-default-large.png 606w" alt=""
-                class="featured-project-image" />
-              <h3 class="featured-project-title">Weather forecast</h3>
-            </header>
-            <p class="featured-project-summary"><span class="project-title-description">Weather app.</span> Webb app
-              built in Javascript using open weather
-              API. <span class="read-more">&raquo;</span></p>
-          </a>
-          <ul class="project-skills">
-            <li class="project-skill">HTML5</li>
-            <li class="project-skill">CSS3</li>
-            <li class="project-skill">JavaScript ES6</li>
-          </ul>
-        </article>
-        <article class="featured-project">
-          <a href="https://github.com/eilsson/">
-            <header class="featured-project-header">
-              <img src="./assets/project-default-small.png"
-                srcset="./assets/project-default-small.png 303w, ./assets/project-default-large.png 606w" alt=""
-                class="featured-project-image" />
-              <h3 class="featured-project-title">Project x title</h3>
-            </header>
-            <p class="featured-project-summary">
-              <span class="project-title-description">Description of title</span>
-              A short summary of the project. Lorem ispum.
-              <span class="read-more">&raquo;</span>
-            </p>
-          </a>
-          <ul class="project-skills">
-            <li class="project-skill">HTML5</li>
-            <li class="project-skill">CSS3</li>
-            <li class="project-skill">JavaScript ES6</li>
-          </ul>
-        </article>
-      </div>
-      <h3 class="subsection-title">Other projects</h3>
-      <div class="other-projects">
-        <article class="project">
-          <a href="https://github.com/eilsson/">
-            <p class="project-summary">
-              <span class="project-title-description">Project title.</span>
-              A short summary of the project.
-              <span class="read-more">&raquo;</span>
-            </p>
-          </a>
-          <ul class="project-skills">
-            <li class="project-skill">HTML5</li>
-            <li class="project-skill">CSS3</li>
-            <li class="project-skill">JavaScript ES6</li>
-          </ul>
-        </article>
-        <article class="project">
-          <a href="https://github.com/eilsson/">
-            <p class="project-summary">
-              <span class="project-title-description">Project title</span>
-              A short summary of the project.
-              <span class="read-more">&raquo;</span>
-            </p>
-          </a>
-          <ul class="project-skills">
-            <li class="project-skill">HTML5</li>
-            <li class="project-skill">CSS3</li>
-            <li class="project-skill">JavaScript ES6</li>
-          </ul>
-        </article>
-        <article class="project">
-          <a href="https://github.com/eilsson/">
-            <p class="project-summary">
-              <span class="project-title-description">Project title.</span>
-              A short summary of the project.
-              <span class="read-more">&raquo;</span>
-            </p>
-          </a>
-          <ul class="project-skills">
-            <li class="project-skill">HTML5</li>
-            <li class="project-skill">CSS3</li>
-            <li class="project-skill">JavaScript ES6</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-    <section aria-label="My thoughts" class="portfolio-section posts">
-      <h2 class="section-title">My thoughts</h2>
-      <article class="post">
-        <a href="#article-url">
-          <header class="post-header">
-            <img src="./assets/blogpost-default-small.png"
-              srcset="./assets/blogpost-default-small.png 301w, ./assets/blogpost-default-large.png 602w" alt=""
-              class="post-image">
-            <time class="post-publishing-date" datetime="2019-10">Oct 2019</time>
-            <h3 class="post-title">I challenged my fears and joined a frontend boot camp</h3>
-          </header>
-          <p class="post-preamble">This spring I hit a point in my life that made me realize that I had to make a
-            change. I challenged my fears and joined Technigo boot camp. <span class="read-more">&raquo;</span></p>
-        </a>
-      </article>
-      <article class="post">
-        <a href="#article-url">
-          <header class="post-header">
-            <img src="./assets/blogpost-default-small.png"
-              srcset="./assets/blogpost-default-small.png 301w, ./assets/blogpost-default-large.png 602w" alt=""
-              class="post-image">
-            <time class="post-publishing-date" datetime="2019-10">Oct 2019</time>
-            <h3 class="post-title">Lorem ipsum-title</h3>
-          </header>
-          <p class="post-preamble">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, sed do
-            eiusmod tempor. <span class="read-more">&raquo;</span>
-          </p>
-        </a>
-      </article>
-    </section>
-    <section aria-label="Skills" class="portfolio-section skills">
-      <h2 class="section-title">Skills</h2>
-      <section class="coding-skills">
-        <h3 class="skill-title">Code</h3>
-        <ul class="skills-list">
-          <li>HTML5</li>
-          <li>CSS3</li>
-          <li>Javascript ES6</li>
-          <li>GitHub</li>
-        </ul>
-      </section>
-      <section class="toolbox-skills">
-        <h3 class="skill-title">Toolbox</h3>
-        <ul class="skills-list">
-          <li>Adobe Photoshop</li>
-          <li>Adobe Illustrator</li>
-          <li>Episerver</li>
-          <li>Slack</li>
-          <li>Wordpress</li>
-        </ul>
-      </section>
-      <section class="upcoming-skills">
-        <h3 class="skill-title">Upcoming</h3>
-        <ul class="skills-list">
-          <li>React</li>
-          <li>Node.js</li>
-          <li>Vue.js</li>
-        </ul>
-      </section>
-      <section class="more-skills">
-        <h3 class="skill-title">More</h3>
-        <ul class="skills-list">
-          <li>Writing</li>
-          <li>Editing</li>
-          <li>Design</li>
-          <li>Project management</li>
-        </ul>
-      </section>
-    </section>
-    <section aria-label="For more" class="portfolio-section social-media">
-      <h2 class="section-title">For more</h2>
       <ul class="social-links">
         <li>
-          <a href="https://www.linkedin.com/in/emmie-nilsson/" class="social-link">
-            <img class="social-media-icon" role="img" src="./assets/linkedin-red.svg" alt="My resume on Linkedin.">
-            <span class="social-media-name">LinkedIn</span>
+          <a
+            href="https://www.linkedin.com/in/emmie-nilsson/"
+            class="social-link"
+          >
+            <img
+              class="social-media-icon"
+              src="./assets/linkedin.svg"
+              alt="My resume on Linkedin."
+            />
           </a>
         </li>
         <li>
-          <a href="https://github.com/eilsson?tab=repositories/" class="social-link">
-            <img class="social-media-icon" role="img" src="./assets/github-red.svg" alt="My repositories on Github." />
-            <span class="social-media-name">GitHub</span>
+          <a
+            href="https://github.com/eilsson?tab=repositories/"
+            class="social-link"
+          >
+            <img
+              class="social-media-icon"
+              src="./assets/github.svg"
+              alt="My repositories on Github."
+            />
           </a>
         </li>
         <li>
-          <a href="https://stackoverflow.com/c/technigo/users/28/" class="social-link">
-            <img class="social-media-icon" role="img" src="./assets/stackoverflow-red.svg"
-              alt="My profile on Stackoverflow." />
-            <span class="social-media-name">StackOverflow</span>
+          <a
+            href="https://stackoverflow.com/c/technigo/users/28/"
+            class="social-link"
+          >
+            <img
+              class="social-media-icon"
+              src="./assets/stackoverflow.svg"
+              alt="My profile on Stackoverflow."
+            />
           </a>
         </li>
       </ul>
-    </section>
-  </main>
-  <footer class="site-footer">
-    <h2 class="contact-title">Contact</h2>
-    <address class="contact-details">
-      <span class="contact-name">Emmie Nilsson</span><br />
-      <a href="tel:+46737036505" aria-label="Phone">+4673 703 65 05</a><br />
-      <a href="mailto:emmie.nilsson@gmail.com" aria-label="Email">emmie.nilsson@gmail.com</a>
-    </address>
-  </footer>
-
-</body>
-
+      <img
+        srcset="assets/emmie-1x.png 162w, assets/emmie-2x.png 324w"
+        sizes="(max-width: 668px) 162px, 324px"
+        src="./assets/portrait-1x.png"
+        alt="Emmie Nilsson."
+        class="site-author-portrait"
+      />
+    </header>
+    <main>
+      <section aria-label="Introduction" class="portfolio-section introduction">
+        <p class="portfolio-introduction">
+          <span class="introduction-decoration" aria-hidden="true"></span>Hi
+          there! I'm a frontend developer with a background in web
+          communication. I love solving problems and learning about new tech. My
+          goal is to create accessible products and content.
+        </p>
+      </section>
+      <section aria-label="Tech" class="portfolio-section tech">
+        <h2 class="section-title">Tech</h2>
+        <p>
+          HTML, <span class="highlight">CSS</span>, Flexbox, CSS Grid,
+          <span class="highlight">JavaScript</span>, ES6, JSX, Web
+          Accessibility, <span class="highlight">React</span>, API:s,
+          mob-programming, pair-programming, GitHub.
+        </p>
+      </section>
+      <section aria-label="Projects" class="portfolio-section projects">
+        <h2 class="section-title">Featured projects</h2>
+        <div class="featured-projects">
+          <article class="featured-project">
+            <a href="https://github.com/eilsson/project-movies">
+              <header class="featured-project-header">
+                <img
+                  src="./assets/movies-projec-small.jpg"
+                  srcset="
+                    ./assets/movies-project-small.jpg 303w,
+                    ./assets/movies-project-large.jpg 606w
+                  "
+                  sizes="(max-width: 668px) 303w, 606w"
+                  alt="Grid of movie posters."
+                  class="featured-project-image"
+                />
+                <h3 class="featured-project-title">Upcoming movies</h3>
+              </header>
+              <p class="featured-project-summary">
+                <span class="project-title-description">Movies app.</span> Web
+                app built in React using the movie database API to display
+                upcoming movies and details about them.
+                <span class="read-more">&raquo;</span>
+              </p>
+            </a>
+            <ul class="project-skills">
+              <li class="project-skill">HTML5</li>
+              <li class="project-skill">CSS3</li>
+              <li class="project-skill">JavaScript ES6</li>
+              <li class="project-skill">React</li>
+              <li class="project-skill">API</li>
+            </ul>
+          </article>
+          <article class="featured-project">
+            <a href="https://github.com/eilsson/project-weather-app">
+              <header class="featured-project-header">
+                <img
+                  src="./assets/weather-app-project-small.jpg"
+                  srcset="
+                    ./assets/weather-app-project-small.jpg 303w,
+                    ./assets/weather-app-project-large.jpg 606w
+                  "
+                  sized="(max-width: 668px) 303w, 606w"
+                  alt="Weather forecast for Stockholm."
+                  class="featured-project-image"
+                />
+                <h3 class="featured-project-title">
+                  Today's weather in Stockholm
+                </h3>
+              </header>
+              <p class="featured-project-summary">
+                <span class="project-title-description">Weather app.</span>
+                Web app built with JavaScript using open weather API to display
+                the current weather and a five day forecast.
+                <span class="read-more">&raquo;</span>
+              </p>
+            </a>
+            <ul class="project-skills">
+              <li class="project-skill">HTML5</li>
+              <li class="project-skill">CSS3</li>
+              <li class="project-skill">JavaScript ES6</li>
+              <li class="project-skill">API</li>
+            </ul>
+          </article>
+        </div>
+        <h3 class="subsection-title">Other projects</h3>
+        <div class="other-projects">
+          <article class="project">
+            <a href="https://github.com/eilsson/project-happy-thoughts">
+              <h3 class="project-title">Happy thoughts.</h3>
+              <p class="project-summary">
+                A twitter like web app built with React using an API. Users can
+                post and like Happy thoughts.
+                <span class="read-more">&raquo;</span>
+              </p>
+            </a>
+            <ul class="project-skills">
+              <li class="project-skill">HTML5</li>
+              <li class="project-skill">CSS3</li>
+              <li class="project-skill">JavaScript ES6</li>
+              <li class="project-skill">JSX</li>
+              <li class="project-skill">React</li>
+              <li class="project-skill">API</li>
+            </ul>
+          </article>
+          <article class="project">
+            <a href="https://github.com/eilsson/project-survey">
+              <h3 class="project-title">Game night survey.</h3>
+              <p class="project-summary">
+                A survey for a boardgaming group. Built in React with hooks.
+                <span class="read-more">&raquo;</span>
+              </p>
+            </a>
+            <ul class="project-skills">
+              <li class="project-skill">HTML5</li>
+              <li class="project-skill">CSS3</li>
+              <li class="project-skill">JavaScript ES6</li>
+              <li class="project-skill">React</li>
+            </ul>
+          </article>
+          <article class="project">
+            <a href="https://github.com/eilsson/project-music-releases">
+              <h3 class="project-title">Music releases.</h3>
+              <p class="project-summary">
+                A web app built in React. The app displays a list of released
+                singles and albums with data from Spotify.
+                <span class="read-more">&raquo;</span>
+              </p>
+            </a>
+            <ul class="project-skills">
+              <li class="project-skill">HTML5</li>
+              <li class="project-skill">CSS3</li>
+              <li class="project-skill">JavaScript ES6</li>
+              <li class="project-skill">React</li>
+            </ul>
+          </article>
+          <article class="project">
+            <a href="https://github.com/eilsson/project-cluedo">
+              <h3 class="project-title">Cluedo mystery randomizer.</h3>
+              <p class="project-summary">
+                A randomizer that sets a random killer suspect, weapon and room
+                for the boardgame Cluedo. Built with JavaScript.
+                <span class="read-more">&raquo;</span>
+              </p>
+            </a>
+            <ul class="project-skills">
+              <li class="project-skill">HTML5</li>
+              <li class="project-skill">CSS3</li>
+              <li class="project-skill">JavaScript ES6</li>
+            </ul>
+          </article>
+          <article class="project">
+            <a href="https://github.com/eilsson/project-3">
+              <h3 class="project-title">Tyler's tiles website.</h3>
+              <p class="project-summary">
+                A one page business website for a fictional company that offers
+                workshops. The page has a booking form and an accordion for
+                frequently asked questions.
+                <span class="read-more">&raquo;</span>
+              </p>
+            </a>
+            <ul class="project-skills">
+              <li class="project-skill">HTML5</li>
+              <li class="project-skill">CSS3</li>
+              <li class="project-skill">JavaScript ES6</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+      <section aria-label="My thoughts" class="portfolio-section posts">
+        <h2 class="section-title">My thoughts</h2>
+        <article class="post">
+          <a
+            href="https://medium.com/@emmie.nilsson/staying-inspired-during-sprint-2-of-technigo-boot-camp-8e0b5a1490d2"
+          >
+            <header class="post-header">
+              <img
+                src="./assets/inspired-small.jpg"
+                srcset="
+                  ./assets/inspired-small.jpg 301w,
+                  ./assets/inspired-large.jpg 602w
+                "
+                sizes="(max-width: 668px) 301w, 602w"
+                alt="Light bulb. Photo by Diego PH on Unsplash."
+                class="post-image"
+              />
+              <time class="post-publishing-date" datetime="2019-11"
+                >Nov 2019</time
+              >
+              <h3 class="post-title">
+                Staying inspired during sprint 2 of Technigo boot camp
+              </h3>
+            </header>
+            <p class="post-preamble">
+              Some things that has kept me inspired amidst the roller coaster
+              highs and lows of programming during sprint 2 of Technigo.
+              <span class="read-more">&raquo;</span>
+            </p>
+          </a>
+        </article>
+        <article class="post">
+          <a
+            href="https://medium.com/@emmie.nilsson/i-challenged-my-fears-and-joined-a-frontend-boot-camp-f3d4894a537d"
+          >
+            <header class="post-header">
+              <img
+                src="./assets/typing-small.jpg"
+                srcset="
+                  ./assets/typing-small.jpg 301w,
+                  ./assets/typing-large.jpg 602w
+                "
+                sizes="(max-width: 668px) 301w, 602w"
+                alt="Someone typing on a computer. Photo by Kaitlyn Baker on Unsplash."
+                class="post-image"
+              />
+              <time class="post-publishing-date" datetime="2019-10"
+                >Oct 2019</time
+              >
+              <h3 class="post-title">
+                I challenged my fears and joined a frontend boot camp
+              </h3>
+            </header>
+            <p class="post-preamble">
+              This spring I hit a point in my life that made me realize that I
+              had to make a change. I challenged my fears and joined Technigo
+              boot camp. <span class="read-more">&raquo;</span>
+            </p>
+          </a>
+        </article>
+      </section>
+      <section aria-label="Skills" class="portfolio-section skills">
+        <h2 class="section-title">Skills</h2>
+        <section class="coding-skills">
+          <h3 class="skill-title">Code</h3>
+          <ul class="skills-list">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript ES6</li>
+            <li>GitHub</li>
+            <li>React</li>
+          </ul>
+        </section>
+        <section class="toolbox-skills">
+          <h3 class="skill-title">Toolbox</h3>
+          <ul class="skills-list">
+            <li>Adobe Photoshop</li>
+            <li>Adobe Illustrator</li>
+            <li>Episerver</li>
+            <li>Sharepoint</li>
+            <li>Slack</li>
+            <li>Wordpress</li>
+          </ul>
+        </section>
+        <section class="upcoming-skills">
+          <h3 class="skill-title">Upcoming</h3>
+          <ul class="skills-list">
+            <li>Node.js</li>
+            <li>Vue.js</li>
+          </ul>
+        </section>
+        <section class="more-skills">
+          <h3 class="skill-title">More</h3>
+          <ul class="skills-list">
+            <li>Writing for the web</li>
+            <li>Graphic design</li>
+            <li>Project management</li>
+          </ul>
+        </section>
+      </section>
+      <section aria-label="For more" class="portfolio-section social-media">
+        <h2 class="section-title">For more</h2>
+        <ul class="social-links">
+          <li>
+            <a
+              href="https://www.linkedin.com/in/emmie-nilsson/"
+              class="social-link"
+            >
+              <img
+                class="social-media-icon"
+                src="./assets/linkedin-red.svg"
+                alt="My resume on Linkedin."
+              />
+              <span class="social-media-name">LinkedIn</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://github.com/eilsson?tab=repositories/"
+              class="social-link"
+            >
+              <img
+                class="social-media-icon"
+                src="./assets/github-red.svg"
+                alt="My repositories on Github."
+              />
+              <span class="social-media-name">GitHub</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://stackoverflow.com/c/technigo/users/28/"
+              class="social-link"
+            >
+              <img
+                class="social-media-icon"
+                src="./assets/stackoverflow-red.svg"
+                alt="My profile on Stackoverflow."
+              />
+              <span class="social-media-name">StackOverflow</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <h2 class="contact-title">Contact</h2>
+      <address class="contact-details">
+        <span class="contact-name">Emmie Nilsson</span><br />
+        <a href="tel:+46737036505" aria-label="Phone">+4673 703 65 05</a><br />
+        <a href="mailto:emmie.nilsson@gmail.com" aria-label="Email"
+          >emmie.nilsson@gmail.com</a
+        >
+      </address>
+    </footer>
+  </body>
 </html>

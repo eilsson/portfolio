@@ -39,12 +39,12 @@ ul,
 p,
 address,
 time {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 p,
 h2 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 h1 {
@@ -56,7 +56,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.3125rem /* 21 px */
+  font-size: 1.3125rem; /* 21 px */
 }
 
 p {
@@ -85,7 +85,7 @@ p {
 
 .subsection-title {
   color: #fa382f;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   margin: 4.375rem 0 2.3125rem 0;
   text-transform: uppercase;
@@ -128,8 +128,8 @@ p {
 }
 
 .site-header::before {
-  background: url('./assets/slack-imgs.png') center;
-  content: '';
+  background: url("./assets/space-small.jpg") center / cover no-repeat;
+  content: "";
   filter: brightness(75%);
   height: 100%;
   position: absolute;
@@ -190,7 +190,7 @@ p {
 }
 
 .social-links li::before {
-  content: '';
+  content: "";
   display: block;
   border: 2px solid #fff;
   border-radius: 50%;
@@ -218,7 +218,7 @@ p {
 .introduction-decoration::after {
   background-color: #fa382f;
   border-radius: 50%;
-  content: '';
+  content: "";
   display: inline-block;
   height: 8px;
   left: 32px;
@@ -238,7 +238,7 @@ p {
 
 .featured-project,
 .project {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   text-align: left;
 }
 
@@ -265,10 +265,21 @@ p {
   width: 100%;
 }
 
+.project-title {
+  display: inline;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.0625rem;
+}
+
+.project-title,
 .project-title-description {
   color: #fa382f;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.project-summary {
+  display: inline;
 }
 
 .project-skills {
@@ -277,8 +288,9 @@ p {
 
 .project-skill {
   background-color: #fddfe7;
-  display: inline;
+  display: inline-block;
   font-size: 0.8125rem;
+  margin-bottom: 0.25rem;
   padding: 0.3125rem 0.625rem;
 }
 
@@ -358,7 +370,7 @@ p {
 }
 
 .post-preamble {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 /* For more */
@@ -453,6 +465,10 @@ p {
     justify-content: center;
   }
 
+  .site-header::before {
+    background: url("./assets/space-medium.jpg") center / cover no-repeat;
+  }
+
   .site-header .social-links {
     justify-content: center;
   }
@@ -513,7 +529,7 @@ p {
   .social-media .social-links li {
     margin-left: 80px;
   }
-  
+
   .social-media .social-links li::before {
     height: 80px;
     width: 80px;
@@ -543,6 +559,10 @@ p {
       ".... .... portrait";
     height: 460px;
     justify-content: center;
+  }
+
+  .site-header::before {
+    background: url("./assets/space-large.jpg") center / cover no-repeat;
   }
 
   .site-author-tagline {
@@ -582,6 +602,11 @@ p {
     width: 260px;
   }
 
+  .highlight {
+    color: #fa382f;
+    font-weight: 700;
+  }
+
   .section-title {
     font-size: 1.2rem;
   }
@@ -609,7 +634,7 @@ p {
   .social-media .social-links li {
     margin-left: 60px;
   }
-  
+
   .social-media .social-links li::before {
     height: 90px;
     width: 90px;
